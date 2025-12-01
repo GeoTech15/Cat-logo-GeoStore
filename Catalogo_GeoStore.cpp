@@ -2,7 +2,7 @@
 #include <fstream>
 using namespace std;
 int main(){
-	ofstream html("Catalogo GeoTech.html");
+	ofstream html("index.html");
 	if(!html){
 		cout<<"No se pudo crear el archivo."<<endl;
 		return 1;
@@ -35,18 +35,19 @@ int main(){
  html << "<input type='text' id='search' class='buscador' placeholder='Buscar producto...' onkeyup='buscar()'>\n";
 
     html << "<div class='producto'>\n";
-    html << "<h2>Pantalla de Privacidad para Monitor 19.5 pulgadas</h2>\n";
-    html << "<p><b>Precio:</b> L.250</p>\n";
-    html << "<img src=\"Privacidad_Monitor.jpeg\" alt=\"Producto 1\" width=\"200\">\n";
-    html << "<img src=\"Privacidad_Monitor2.jpeg\" alt=\"Producto 1\" width=\"200\">\n";
+    html << "<h2>Protector de Privacidad para Monitor 19.5 pulgadas</h2>\n";
+    html << "<p><b>Precio:</b> L.400</p>\n";
+    html << "<img src=\"Privacidad_Monitor.jpeg\" alt=\"Producto 1\" width=\"200\" onclick=\"window.open(this.src)\">\n";
+    html << "<img src=\"Privacidad_Monitor2.jpeg\" alt=\"Producto 1\" width=\"200\" onclick=\"window.open(this.src)\">\n";
     html << "<p>Filtro de privacidad para monitor que bloquea hasta un 60% de la visibilidad lateral, evitando que otras personas vean tu pantalla.<br>Reduce reflejos, protege tus datos y brinda una experiencia de uso más segura. Ideal para oficinas, clases y trabajo remoto.</p>\n";
     html << "</div>\n";
 
     html << "<div class='producto'>\n";
-    html << "<h2>Producto 2</h2>\n";
-    html << "<p>Soporte metálico resistente para computadora.</p>\n";
-    html << "<p><b>Precio:</b> L.375</p>\n";
-    html << "<img src=\"foto2.jpg\" alt=\"Producto 2\" width=\"200\">\n";
+    html << "<h2>Protector de Privacidad para Monitor 21.5 pulgadas</h2>\n";
+    html << "<p><b>Precio:</b> L.500</p>\n";
+    html << "<img src=\"Privacidad_Monitor.jpeg\" alt=\"Producto 2\" width=\"200\" onclick=\"window.open(this.src)\">\n";
+    html << "<img src=\"Privacidad_Monitor_21.jpeg\" alt=\"Producto 2\" width=\"200\" onclick=\"window.open(this.src)\">\n"; 
+    html << "<p>Filtro de privacidad para monitor que bloquea hasta un 60% de la visibilidad lateral, evitando que otras personas vean tu pantalla.<br>Reduce reflejos, protege tus datos y brinda una experiencia de uso más segura. Ideal para oficinas, clases y trabajo remoto.</p>\n";
     html << "</div>\n";
     
     html << "</body>\n";

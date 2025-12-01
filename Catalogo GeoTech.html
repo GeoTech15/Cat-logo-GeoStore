@@ -1,0 +1,38 @@
+<html>
+<head><title>Catálogo de Productos</title></head>
+<style>
+body { font-family: Arial; }
+.producto { margin-bottom: 25px; }
+.buscador { margin-bottom: 20px; padding: 10px; width: 300px; }
+</style>
+<script>
+function buscar() {
+  let texto = document.getElementById('search').value.toLowerCase();
+  let productos = document.getElementsByClassName('producto');
+  for (let p of productos) {
+    let nombre = p.getElementsByTagName('h2')[0].innerText.toLowerCase();
+    let desc = p.getElementsByTagName('p')[0].innerText.toLowerCase();
+    if (nombre.includes(texto) || desc.includes(texto)) p.style.display = 'block';
+    else p.style.display = 'none';
+  }
+}
+</script>
+</head>
+<body>
+<h1>Catálogo de Productos</h1>
+<input type='text' id='search' class='buscador' placeholder='Buscar producto...' onkeyup='buscar()'>
+<div class='producto'>
+<h2>Pantalla de Privacidad para Monitor 19.5 pulgadas</h2>
+<p><b>Precio:</b> L.250</p>
+<img src="Privacidad_Monitor.jpeg" alt="Producto 1" width="200">
+<img src="Privacidad_Monitor2.jpeg" alt="Producto 1" width="200">
+<p>Filtro de privacidad para monitor que bloquea hasta un 60% de la visibilidad lateral, evitando que otras personas vean tu pantalla.<br>Reduce reflejos, protege tus datos y brinda una experiencia de uso más segura. Ideal para oficinas, clases y trabajo remoto.</p>
+</div>
+<div class='producto'>
+<h2>Producto 2</h2>
+<p>Soporte metálico resistente para computadora.</p>
+<p><b>Precio:</b> L.375</p>
+<img src="foto2.jpg" alt="Producto 2" width="200">
+</div>
+</body>
+</html>

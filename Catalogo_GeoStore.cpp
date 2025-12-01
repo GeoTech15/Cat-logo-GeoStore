@@ -8,8 +8,7 @@ int main(){
 		return 1;
 	}
 	html << "<html>\n";
-	html << "    <meta charset=\"UTF-8\">\n";
-    html << "<head><title>Catálogo de Productos GeoStore</title></head>\n";
+    html << "<head><title>Cat&aacute;logo de Productos GeoStore</title></head>\n";
     html << "<style>\n";
     html << "body { font-family: Arial; }\n";
     html << ".producto { margin-bottom: 25px; }\n";
